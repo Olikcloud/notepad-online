@@ -18,7 +18,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+        # 升级到 @v2，解决内部依赖 upload-artifact v3 被弃用的问题
+        uses: actions/upload-pages-artifact@v2
         with:
           path: .
 
